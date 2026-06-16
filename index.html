@@ -818,9 +818,9 @@ model-viewer::part(default-progress-bar) {
     <!-- Product card -->
     <div class="hcard">
       <div class="hcard-badge">⚡ Em estoque</div>
-      <div class="hcard-name">TUI POP</div>
-      <div class="hcard-sub">Scooter elétrica · 1000W · Lítio</div>
-      <button class="hcard-btn" onclick="openModal('sc3')">Ver detalhes →</button>
+      <div class="hcard-name">TUI MAIS</div>
+      <div class="hcard-sub">Scooter elétrica · 1000W · 190kg</div>
+      <button class="hcard-btn" onclick="openModal('sc2')">Ver detalhes →</button>
     </div>
     <!-- Store badge -->
     <div class="hstore">
@@ -1018,6 +1018,45 @@ model-viewer::part(default-progress-bar) {
   </div>
 </section>
 
+<!-- CTA -->
+<!-- ════════════════════════════════════════
+     CALCULADORA DE ECONOMIA
+════════════════════════════════════════ -->
+<section class="calc-sec">
+  <div class="calc-wrap">
+    <div class="calc-left rv">
+      <span class="eyebrow" style="color:rgba(232,66,10,.7)">Calcule agora</span>
+      <h2 class="sec-t" style="color:#fff;margin-top:12px">QUANTO VOCÊ<br/><span class="hl">ECONOMIZA?</span></h2>
+      <p>Troque a moto a gasolina pela scooter elétrica e veja a diferença no bolso. Ajuste os sliders com sua realidade.</p>
+    </div>
+    <div class="calc-box rv d1">
+      <div class="calc-field">
+        <label>Km rodados por mês — <span class="val" id="cKm">600</span> km</label>
+        <input type="range" min="100" max="2000" value="600" step="50" id="slKm" oninput="calcEco()"/>
+      </div>
+      <div class="calc-field">
+        <label>Preço do combustível — R$ <span class="val" id="cGas">6,50</span>/L</label>
+        <input type="range" min="4" max="10" value="6.5" step="0.10" id="slGas" oninput="calcEco()"/>
+      </div>
+      <div class="calc-field">
+        <label>Consumo atual (moto a gasolina) — <span class="val" id="cCons">25</span> km/L</label>
+        <input type="range" min="10" max="50" value="25" step="1" id="slCons" oninput="calcEco()"/>
+      </div>
+      <div class="calc-result">
+        <div class="calc-rv">
+          <span class="calc-rv-n" id="rEco">R$ 0</span>
+          <span class="calc-rv-l">Economia mensal</span>
+        </div>
+        <div class="calc-rv">
+          <span class="calc-rv-n" id="rAno">R$ 0</span>
+          <span class="calc-rv-l">Economia anual</span>
+        </div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.5">*Cálculo baseado no custo médio de recarga elétrica de R$ 0,85/kWh e autonomia de 60 km por carga da scooter.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ASSISTÊNCIA TÉCNICA -->
 <section class="at-sec" id="assistencia">
   <div class="container">
@@ -1147,46 +1186,6 @@ model-viewer::part(default-progress-bar) {
     <div class="tc rv d2"><div class="tc-s">★★★★★</div><p class="tc-t">"Instalei 3 Ultra 75 na academia. Alunos satisfeitos, avaliações no Google subiram. Quem sente não quer voltar."</p><div class="tc-a"><div class="tc-av">FS</div><div><div class="tc-n">Fernanda Souza</div><div class="tc-r">Proprietária de Academia · GO</div></div></div></div>
   </div>
 </section>
-
-<!-- CTA -->
-<!-- ════════════════════════════════════════
-     CALCULADORA DE ECONOMIA
-════════════════════════════════════════ -->
-<section class="calc-sec">
-  <div class="calc-wrap">
-    <div class="calc-left rv">
-      <span class="eyebrow" style="color:rgba(232,66,10,.7)">Calcule agora</span>
-      <h2 class="sec-t" style="color:#fff;margin-top:12px">QUANTO VOCÊ<br/><span class="hl">ECONOMIZA?</span></h2>
-      <p>Troque a moto a gasolina pela scooter elétrica e veja a diferença no bolso. Ajuste os sliders com sua realidade.</p>
-    </div>
-    <div class="calc-box rv d1">
-      <div class="calc-field">
-        <label>Km rodados por mês — <span class="val" id="cKm">600</span> km</label>
-        <input type="range" min="100" max="2000" value="600" step="50" id="slKm" oninput="calcEco()"/>
-      </div>
-      <div class="calc-field">
-        <label>Preço do combustível — R$ <span class="val" id="cGas">6,50</span>/L</label>
-        <input type="range" min="4" max="10" value="6.5" step="0.10" id="slGas" oninput="calcEco()"/>
-      </div>
-      <div class="calc-field">
-        <label>Consumo atual (moto a gasolina) — <span class="val" id="cCons">25</span> km/L</label>
-        <input type="range" min="10" max="50" value="25" step="1" id="slCons" oninput="calcEco()"/>
-      </div>
-      <div class="calc-result">
-        <div class="calc-rv">
-          <span class="calc-rv-n" id="rEco">R$ 0</span>
-          <span class="calc-rv-l">Economia mensal</span>
-        </div>
-        <div class="calc-rv">
-          <span class="calc-rv-n" id="rAno">R$ 0</span>
-          <span class="calc-rv-l">Economia anual</span>
-        </div>
-      </div>
-      <p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:14px;line-height:1.5">*Cálculo baseado no custo médio de recarga elétrica de R$ 0,85/kWh e autonomia de 60 km por carga da scooter.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ════════════════════════════════════════
      FAQ
 ════════════════════════════════════════ -->
